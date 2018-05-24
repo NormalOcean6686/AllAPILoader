@@ -8,15 +8,15 @@ use pocketmine\plugin\PluginDescription;
 use pocketmine\Server;
 
 class AllFolderPluginLoader extends FolderPluginLoader {
-
+  
     private $server;
-
+  
     public function __construct(Server $server) {
         parent::__construct($server);
         $this->server = $server;
     }
-
-    public function getPluginDescription($file) {
+  
+    public function getPluginDescription(string $file) {
         if (is_dir($file) and file_exists($file . "/plugin.yml")) {
             $yaml = @file_get_contents($file . "/plugin.yml");
             if ($yaml != "") {
@@ -29,8 +29,8 @@ class AllFolderPluginLoader extends FolderPluginLoader {
                 }
             }
         }
-
+      
         return null;
     }
-
+  
 }
