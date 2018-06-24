@@ -5,3 +5,5 @@ Allows you to run old plugins and plugins incompatible
 * Step 1: Download AllApiLoader
 * Step 2: Put it on your plugins folder
 * Step 3: Restart your server
+### NEWS
+#### updated to 3.0.2
